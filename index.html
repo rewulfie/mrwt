@@ -667,7 +667,7 @@
   // ============================================
   const SUPABASE_URL = 'https://rpdbnmwyfjzilbsrhgsd.supabase.co';
   const SUPABASE_KEY = 'sb_publishable_npstJNu6Vn-F65KlcPDQjw_TBmlA0zl';
-  const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+  const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 
   // ============================================
   // STATE
@@ -758,7 +758,7 @@
         userName = n; partnerName = p; pairCode = c; pairId = existing.id;
         // Update the second person's name if missing
         if (!existing.user_b_name && existing.user_a_name !== n) {
-          await supabase.from('pairs').update({ user_b_name: n }).eq('id', existing.id);
+          await db.from('pairs').update({ user_b_name: n }).eq('id', existing.id);
         }
       } else {
         // Create new pair
@@ -835,7 +835,7 @@
     sendCard.classList.add('loading');
 
     try {
-      const { error } = await supabase.from('letters').insert(letter);
+      const { error } = await db.from('letters').insert(letter);
       if (error) throw error;
       clearLetterForm();
       showToast('your letter has been sealed and sent.');
