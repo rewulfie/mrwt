@@ -745,7 +745,7 @@
 
     try {
       // Check if a pair with this code already exists
-      const { data: existing, error: lookupErr } = await supabase
+      const { data: existing, error: lookupErr } = await db
         .from('pairs')
         .select('*')
         .eq('pair_code', c)
@@ -762,7 +762,7 @@
         }
       } else {
         // Create new pair
-        const { data: created, error: createErr } = await supabase
+        const { data: created, error: createErr } = await db
           .from('pairs')
           .insert({ pair_code: c, user_a_name: n })
           .select()
@@ -864,7 +864,7 @@
     el.innerHTML = `<div class="empty-state">loading...</div>`;
 
     try {
-      const { data, error } = await supabase
+      const { data, error } = await db
         .from('letters')
         .select('*')
         .eq('pair_id', pairId)
