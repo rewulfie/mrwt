@@ -135,8 +135,7 @@
 
   .input-wrap {
     width: 100%;
-    height: 38px;
-    overflow: hidden;
+    height: 42px;
     margin-bottom: 24px;
     background: var(--box-bg);
     border: 1px solid var(--parchment-deep);
@@ -148,18 +147,15 @@
   .input-wrap:focus-within { border-color: #8B1A1A; }
 
   .ink-input {
-    width: 180%;
-    transform: scale(0.55);
-    transform-origin: left center;
+    width: 100%;
     background: transparent;
     border: none;
     outline: none;
     font-family: 'Libre Baskerville', Georgia, serif;
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 400;
     color: var(--placeholder);
-    padding: 0 10px;
-    flex-shrink: 0;
+    padding: 0 14px;
   }
 
   .ink-input::placeholder { color: var(--placeholder); }
@@ -238,8 +234,7 @@
 
   .letter-line-wrap {
     width: 100%;
-    height: 36px;
-    overflow: hidden;
+    height: 42px;
     margin-bottom: 20px;
     background: rgba(255,255,255,0.35);
     border: 1px solid var(--parchment-dark);
@@ -251,25 +246,21 @@
   .letter-line-wrap:focus-within { border-color: #8B1A1A; }
 
   .letter-line {
-    width: 180%;
-    transform: scale(0.55);
-    transform-origin: left center;
+    width: 100%;
     background: transparent;
     border: none;
     outline: none;
     font-family: 'Libre Baskerville', Georgia, serif;
-    font-size: 10px;
+    font-size: 14px;
     font-weight: 400;
     color: var(--placeholder);
-    padding: 0 10px;
+    padding: 0 14px;
   }
 
   .letter-line::placeholder { color: var(--placeholder); }
 
   .letter-body-wrap {
     width: 100%;
-    min-height: 220px;
-    overflow: hidden;
     margin-bottom: 20px;
     background: rgba(255,255,255,0.35);
     border: 1px solid var(--parchment-dark);
@@ -280,20 +271,18 @@
   .letter-body-wrap:focus-within { border-color: #8B1A1A; }
 
   .letter-body {
-    width: 180%;
-    transform: scale(0.55);
-    transform-origin: left top;
+    width: 100%;
     background: transparent;
     border: none;
     outline: none;
     resize: none;
     font-family: 'Libre Baskerville', Georgia, serif;
-    font-size: 10px;
+    font-size: 15px;
     font-weight: 400;
-    line-height: 2;
+    line-height: 1.8;
     color: var(--placeholder);
-    padding: 0 10px;
-    min-height: 380px;
+    padding: 0 14px;
+    min-height: 220px;
   }
 
   .letter-body::placeholder { color: var(--placeholder); }
